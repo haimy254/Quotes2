@@ -1,4 +1,4 @@
-import { Component, OnInit, Input,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, , Upvote } from '@angular/core';
 import { Quote } from '@angular/compiler';
 
 @Component({
@@ -18,7 +18,26 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
+   upvote = 0;
+ downvote = 0;
+
+ function refreshResults () {
+  var results = document.getElementById('results');
+results.innerHTML = 'total: ' + (upvote + downvote);
+  results.innerHTML += '<br />upvote: ' + upvote;
+  results.innerHTML += '<br />downvote: ' + downvote;
+}
+
+document.getElementById('upvote-button').addEventListener('click', function () {
+  upvote++;
+  refreshResults();
+});
+
+document.getElementById('downvote-button').addEventListener('click', function () {
+  downvote++;
+  refreshResults();
+});
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() : void {}
 }
