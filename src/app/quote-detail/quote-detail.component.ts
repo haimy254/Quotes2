@@ -23,18 +23,18 @@ export class QuoteDetailComponent implements OnInit {
 
  function refreshResults () {
   var results = document.getElementById('results');
-results.innerHTML = 'total: ' + (upvote + downvote);
-  results.innerHTML += '<br />upvote: ' + upvote;
-  results.innerHTML += '<br />downvote: ' + downvote;
+results.innerHTML = 'total: ' + (upVote + downVote);
+  results.innerHTML += '<br />upvote: ' + upVote;
+  results.innerHTML += '<br />downvote: ' + downVote;
 }
 
 document.getElementById('upvote-button').addEventListener('click', function () {
-  upvote++;
+  upVote++;
   refreshResults();
 });
 
 document.getElementById('downvote-button').addEventListener('click', function () {
-  downvote++;
+  downVote++;
   refreshResults();
 });
   constructor() {}
