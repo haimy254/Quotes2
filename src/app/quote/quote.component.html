@@ -6,17 +6,17 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quote;let i = index'>
         <div>
-          <h4 id={{i}} >{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h4>
+          <h4 id={{i}} >{{quote.name}} due on {{quote.completeDate}}</h4>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
         </div>
 
         <div *ngIf='quote.showauthor'>
-          <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+          <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <app-Quote-form (addQuote)="addNewQuote($event)"></app-Quote-form>
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
 

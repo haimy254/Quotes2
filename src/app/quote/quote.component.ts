@@ -1,4 +1,4 @@
-import { Quote } from './../quote';
+
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 
@@ -46,13 +46,13 @@ export class GoalComponent implements OnInit {
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
   }
 
-  completeGoal(isComplete, index) {
+  completeQuote(isComplete, index) {
     if (isComplete) {
       this.quotes.splice(index, 1);
     }
   }
 
-  deleteGoal(isComplete, index) {
+  deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(
         `Are you sure you want to delete ${this.quotes[index].name}?`
@@ -63,9 +63,9 @@ export class GoalComponent implements OnInit {
       }
     }
   }
-  addNewQuote(uote) {
-    let goalLength = this.quotes.length;
-    quote.id = goalLength + 1;
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
