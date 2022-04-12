@@ -10,8 +10,6 @@ export class QuoteDetailComponent implements OnInit {
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  constructor() {}
-
   quoteComplete(complete: boolean) {
     this.isComplete.emit(complete);
   }
@@ -19,26 +17,11 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
-  totalVote = {
-    quopteUpVote: Number,
-    quoteDownVote: Number,
-  
-  if(_totalVote:number) {
-    console.log('addition:',quopteUpVote+quoteDownVote);
-  }
-}
-  // quopteUpVote(index:number) {
-  //   if (index) {
-  //     console.log(typeof quoteUpVote++);
-  //   }
-  // }
-  // quoteDownVote(index: number) {
-  //   if (index) {
-  //     console.log(typeof quoteDownVote++);
-  //   }
-  // }
 
-  ngOnInit(): void {}
+  constructor() {}
+
+  ngOnInit(): void {
+  }
 }
   
 
@@ -46,23 +29,4 @@ export class QuoteDetailComponent implements OnInit {
 //  downVote = 0;
 //  totalVote=0;
 
-//  function refreshResults () {
-//   var results = document.getElementById('results');
-// results.innerHTML = 'total: ' + (upVote + downVote);
-//   results.innerHTML += '<br />upvote: ' + upVote;
-//   results.innerHTML += '<br />downvote: ' + downVote;
-// }
-
-// document.getElementById('upvote-button').addEventListener('click', function () {
-//   upVote++;
-//   refreshResults();
-// });
-
-// document.getElementById('downvote-button').addEventListener('click', function () {
-//   downVote++;
-//   refreshResults();
-// });
-  // constructor() {}
-
-  // ngOnInit() : void {}
 

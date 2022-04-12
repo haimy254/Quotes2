@@ -66,13 +66,6 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
-quoteUpVote(_index:number,_iscomplete:any){
-  this.quoteUpVote(_index,Number);
-  if (_iscomplete){
-this.quoteUpVote= this.quoteUpVote ++;
-  }
-
-}
 
   constructor() {}
 
