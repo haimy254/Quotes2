@@ -27,16 +27,16 @@ export class QuoteDetailComponent implements OnInit {
     console.log('addition:',quopteUpVote+quoteDownVote);
   }
 }
-  quopteUpVote(index:number) {
-    if (index) {
-      console.log(typeof quoteUpVote++);
-    }
-  }
-  quoteDownVote(index: number) {
-    if (index) {
-      console.log(typeof quoteDownVote++);
-    }
-  }
+  // quopteUpVote(index:number) {
+  //   if (index) {
+  //     console.log(typeof quoteUpVote++);
+  //   }
+  // }
+  // quoteDownVote(index: number) {
+  //   if (index) {
+  //     console.log(typeof quoteDownVote++);
+  //   }
+  // }
 
   ngOnInit(): void {}
 }
