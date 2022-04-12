@@ -14,7 +14,7 @@ export class QuoteComponent implements OnInit {
       1,
       'the best is yet to be',
       'Find an online version and watch merlin find his son',
-      new Date(2020, 3, 14),
+      new Date(),
       0,
       0,
       0
@@ -23,7 +23,7 @@ export class QuoteComponent implements OnInit {
       2,
       'look before you lemp',
       'I have to buy cookies for the parrot',
-      new Date(2019, 6, 9),
+      new Date(),
       0,
       0,
       0
@@ -32,7 +32,7 @@ export class QuoteComponent implements OnInit {
       3,
       'once bitten twice shy',
       'Diana has her birthday coming up soon',
-      new Date(2022, 1, 12),
+      new Date(),
       0,
       0,
       0
@@ -48,6 +48,7 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
+
   totalVote() {}
   deleteQuote(isComplete: any, index: number) {
     if (isComplete) {
@@ -60,12 +61,12 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote:Quote) {
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength + 1;
-    quote.completeDate = new Date(quote.completeDate);
-    this.quotes.push(quote);
-  }
+  // addNewQuote(quote:Quote) {
+  //   let quoteLength = this.quotes.length;
+  //   quote.id = quoteLength + 1;
+  //   quote.completeDate = new Date(quote.completeDate);
+  //   this.quotes.push(quote);
+  // }
 
   constructor() {}
 

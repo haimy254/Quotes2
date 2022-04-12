@@ -1,29 +1,31 @@
-<div class="quote-bg">
+
+  
 <div class="container">
+  <div class="quote-bg">
   <h1>My quotes</h1>
   <hr>
 <div class="container">
+  <div class="row">
     <div class="col-md-6">
       <div *ngFor="let quote of quotes;let i = index">
         <div>
           <h4 id={{i}} >{{quote.name}} due on {{quote.completeDate}}</h4>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
         </div>
-
+      
         <div *ngIf='quote.showauthor'>
           <app-quote-detail (quote)='quote' (isComplete) = 'deleteQuote($event,i)'>
           </app-quote-detail>
         </div>
       </div>
     </div>
-    </div>
-  <div class="row">
-    <div class="col-md-6">
-      <app-quote-form (addQuote)="addNewQuote(quote)"></app-quote-form>
-    </div>
   </div>
+  <!-- <div class="row"> -->
+    <div class="col-md-6">
+      <app-quote-form ></app-quote-form>
+    </div>
+  <!-- </div> -->
 
   <p *ngIf='quotes.length' > 20'>You have too many quote</p>
-
-</div >
 </div>
+</div >

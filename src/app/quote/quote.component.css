@@ -1,3 +1,8 @@
-.quote-bg{
-    background-image: url() s
+/* .row{
+    display: flex;
+} */
+.container{
+    display: flex;
+    font-size: smaller;
+    
 }
