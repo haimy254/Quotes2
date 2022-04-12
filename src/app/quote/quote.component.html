@@ -10,7 +10,7 @@
         </div>
 
         <div *ngIf='quote.showauthor'>
-          <app-quote-detail (quote)='quote', (isComplete) = 'deleteQuote($event,i)'>
+          <app-quote-detail (quote)='quote' (isComplete) = 'deleteQuote($event,i)'>
           </app-quote-detail>
         </div>
       </div>
@@ -22,6 +22,6 @@
     </div>
   </div>
 
-  <p *ngIf='quote.length > 20'>You have too many quote</p>
+  <p *ngIf='quote.length' > 20'>You have too many quote</p>
 
 </div >

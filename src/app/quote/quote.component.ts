@@ -6,7 +6,7 @@ import { Quote } from '../quote';
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css'],
 })
-export class GoalComponent implements OnInit {
+export class QuoteComponent implements OnInit {
   @Input() quote: Quote;
   quotes: Quote[] = [
     new Quote(
@@ -59,7 +59,7 @@ export class GoalComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote: any) {
+  addNewQuote(quote:Quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate);

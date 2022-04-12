@@ -7,11 +7,12 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-detail.component.css'],
 })
 export class QuoteDetailComponent implements OnInit {
+
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
   constructor() {}
-  
+
   quoteComplete(complete: boolean) {
     this.isComplete.emit(complete);
   }
@@ -19,9 +20,8 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
-  // @EventEmitter(){}
-    
-  }
+  ngOnInit():void {}
+}
   
 
   //  upVote = 0;
