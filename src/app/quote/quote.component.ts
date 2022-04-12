@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
     new Quote(
       1,
       'the best is yet to be',
-      'Find an online version and watch merlin find his son',
+      '',
       new Date(),
       0,
       0,
@@ -22,7 +22,7 @@ export class QuoteComponent implements OnInit {
     new Quote(
       2,
       'look before you lemp',
-      'I have to buy cookies for the parrot',
+      '',
       new Date(),
       0,
       0,
@@ -31,7 +31,7 @@ export class QuoteComponent implements OnInit {
     new Quote(
       3,
       'once bitten twice shy',
-      'Diana has her birthday coming up soon',
+      '',
       new Date(),
       0,
       0,
