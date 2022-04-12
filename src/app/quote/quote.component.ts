@@ -1,5 +1,6 @@
+import { Quote } from './../quote';
 import { Component, OnInit, Input } from '@angular/core';
-import { Quote } from '../quote';
+
 
 @Component({
   selector: 'app-quote',
@@ -65,6 +66,7 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
+
 
   constructor() {}
 

@@ -20,6 +20,19 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
+  quopteUpVote(index:number ){
+    if(index){
+      this.totalVote++;
+    }
+  }
+  quoteDownVote(index:number){
+    if(index){
+      this.
+    }
+  }
+  quoteTotalVote(index:number){
+
+  }
   ngOnInit():void {}
 }
   
