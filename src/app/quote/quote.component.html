@@ -11,12 +11,12 @@
         <h4 class="list">MY LIST</h4>
       <div *ngFor="let quote of quotes;let i = index">
         <div>
-          <p id={{i}} >{{quote.name}} </p>
+          <p >{{quote.description}} </p>
           <button (click)='toggleDetails(i)' class="btn-btn-primary">Toggle </button>
         </div>
       <!--<div class="container"> -->
         <div >
-          <app-quote-detail *ngIf='quote.showauthor' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'>
+          <app-quote-detail *ngIf='quote.showauthor' [quote]='quote' (isDelete) = 'deleteQuote($event,i)'>
           </app-quote-detail>
         </div>
       <!--</div> -->
@@ -26,8 +26,8 @@
 <!-- <div class="container"> -->
     <div class="col-md-6">
       <div>
-        <h4 id={{submitQuote}}}></h4>
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        <h4></h4>
+      <app-quote-form (add)="newQuote($event)"></app-quote-form>
     </div>
   <!-- </div> -->
 </div>

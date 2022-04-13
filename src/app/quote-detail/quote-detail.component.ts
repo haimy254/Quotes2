@@ -8,24 +8,24 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
   @Input() quote: Quote;
-  @Output() addNewQuote = new EventEmitter<boolean>();
-  like:number;
+  @Output() isDelete = new EventEmitter<boolean>();
+  // like:number;
   isComplete: any;
 
 
-  quoteComplete(complete: boolean) {
-    this.isComplete.emit(complete);
-  }
+  // quoteComplete(complete: boolean) {
+  //   this.isComplete.emit(complete);
+  // }
 
   quoteDelete(complete: boolean) {
-    this.isComplete.emit(complete);
+    this.isDelete.emit(complete);
   }
   
  upVote(){
-   this.quote.like += 1;
+   this.quote.upVote += 1;
 }
  downVote(){
-    this.quote.like += 1;
+    this.quote.downVote += 1;
  }
   constructor() {}
 

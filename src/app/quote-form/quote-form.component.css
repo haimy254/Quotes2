@@ -1,3 +1,6 @@
-.form-group{
-    border-radius: 5px;
+.btn-btn-success{
+       background: linear-gradient(110deg, #ff4da6 ,#33adff);
+       color: aliceblue;
+       border-radius: 0.7rem;
+       width: 150px;
 }
