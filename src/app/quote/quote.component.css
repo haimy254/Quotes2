@@ -1,8 +1,8 @@
-/* .row{
+/* .row{p
     display: flex;
 } */
 .container{
     display: flex;
     font-size: smaller;
-    
+ 
 }
