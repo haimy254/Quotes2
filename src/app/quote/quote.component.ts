@@ -8,36 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
-  @Input() quote: Quote;
+  // @Input() quote: Quote;
   quotes: Quote[] = [
-    new Quote(
-      1,
-      'the best is yet to be',
-      '',
-      new Date(),
-      0,
-      0,
-      0
-    ),
-    new Quote(
-      2,
-      'look before you lemp',
-      '',
-      new Date(),
-      0,
-      0,
-      0
-    ),
-    new Quote(
-      3,
-      'once bitten twice shy',
-      '',
-      new Date(),
-      0,
-      0,
-      0
-    ),
+    new Quote(1, 'the best is yet to be', '', new Date(), 0, 0, 0),
+    new Quote(2, 'look before you lemp', '', new Date(), 0, 0, 0),
+    new Quote(3, 'once bitten twice shy', '', new Date(), 0, 0, 0),
   ];
+  addQuote: any;
 
   toggleDetails(index: number) {
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
@@ -61,12 +38,18 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  // addNewQuote(quote:Quote) {
-  //   let quoteLength = this.quotes.length;
-  //   quote.id = quoteLength + 1;
-  //   quote.completeDate = new Date(quote.completeDate);
-  //   this.quotes.push(quote);
-  // }
+  addNewQuote(quote: any) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
+  submitQuote() {
+    this.addQuote.emit(this.newQuote);
+  }
+  newQuote(_newQuote: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() {}
 

@@ -1,5 +1,5 @@
-import { Quote } from '../quote';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quote-form',
@@ -12,7 +12,7 @@ export class QuoteFormComponent implements OnInit {
   quote: any;
   quotes: any;
 
-  submitGoal() {
+  submitQuote() {
     this.addQuote.emit(this.newQuote);
   }
   addNewQuote(quote: Quote) {

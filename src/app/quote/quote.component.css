@@ -6,3 +6,9 @@
     font-size: smaller;
  
 }
+
+.btn-btn-primary{
+color: purple;
+background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+
+}
