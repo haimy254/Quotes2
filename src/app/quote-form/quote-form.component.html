@@ -2,6 +2,7 @@
   <h2 class="text-center">Write a quote</h2>
   
   <form>
+    <div class="form-q">
       <div class="form-group">
 
           <label for="name">Author</label>
@@ -14,11 +15,12 @@
           <textarea class="form-control" id="quote" rows="4" required></textarea>
   </div>
       </div>
-      <div class="form-group">
+      <div class="form-group1">
           <label for="date">Date</label>
           <input type='date' id="Date" required>
 
       </div>
-       <button (click)= 'addNewQuote' class="btn btn-success">Add Quote</button>
+       <button (click)= 'submitQuote' class="btn btn-success">submit</button>
+       </div>
   </form>
 </div>

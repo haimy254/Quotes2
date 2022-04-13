@@ -1,9 +1,9 @@
 
 
 <p>{{quote.name}}</p>
-<button (click)= 'quoteComplete(true)'>Complete</button>
+<button class="buttons" (click)= 'quoteComplete(true)'>Complete</button>
 <!-- <p>{{quote.author}}</p> -->
 <!-- <p>This goal will be complete in {{quote.completeDate}} days</p> -->
 <!-- <p>{quote.totalVote}</p> -->
-<p><button (click)="upVote()" type="button">{{quote.like}}LIKE</button></p>
-<button (click)='downVote()'> {{quote.like}}DISLIKE </button>
+<p><button class="buttons" (click)="upVote()" type="button">like</button></p>
+<button class="buttons"(click)='downVote()'>dislike </button>

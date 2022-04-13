@@ -8,8 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
   @Input() quote: Quote;
-  @Output() isComplete = new EventEmitter<boolean>();
+  @Output() addNewQuote = new EventEmitter<boolean>();
   like:number;
+  isComplete: any;
 
 
   quoteComplete(complete: boolean) {
