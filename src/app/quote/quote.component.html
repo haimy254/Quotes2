@@ -2,7 +2,7 @@
   
 <div class="container">
   <div class="quote-bg">
-  <h1>My quotes</h1>
+  <h3 class="quote-title">My quotes</h3>
   
 <div class="container">
   <div class="row">
@@ -12,7 +12,7 @@
           <h4 id={{i}} >{{quote.name}} </h4>
           <button (click)='toggleDetails(i)' class="btn-btn-primary">Toggle Details</button>
         </div>
-      
+      <div class="container">
         <div *ngIf='quote.showauthor'>
           <app-quote-detail (quote)='quote' (isComplete) = 'deleteQuote($event,i)'>
           </app-quote-detail>
@@ -28,6 +28,8 @@
     </div>
   </div>
 </div>
-  <p *ngIf='quotes.length' > 20'>You have too many quote</p>
+  <p *ngIf='quotes.length' > </p>
 </div>
-</div >
+</div>
+  </div>
+</div>

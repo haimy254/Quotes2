@@ -10,9 +10,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class QuoteComponent implements OnInit {
   // @Input() quote: Quote;
   quotes: Quote[] = [
-    new Quote(1, 'the best is yet to be', '', new Date(), 0, 0, 0),
-    new Quote(2, 'look before you lemp', '', new Date(), 0, 0, 0),
-    new Quote(3, 'once bitten twice shy', '', new Date(), 0, 0, 0),
+    new Quote(1, 'the best is yet to be', '', new Date(), 0, 0),
+    new Quote(2, 'look before you lemp', '', new Date(), 0, 0),
+    new Quote(3, 'once bitten twice shy', '', new Date(), 0, 0),
   ];
   addQuote: any;
 
